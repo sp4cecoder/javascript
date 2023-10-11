@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>De onde você é?</h1>
+    Páis <input type="text" name="país" id="país">
+    <input type="button" value="enter" onclick="where()">
+    <div id="resul">
+
+    </div>
+
+    <script>
+        function where() {
+            var a1 = window.document.getElementById('país')
+            var res = window.document.getElementById('resul')
+            res.innerHTML = `<p>Você é do/da ${a1}</p>`
+            if (a1 != Brasil) {
+                res.innerHTML = `<p>Você é estrangeiro`
+            } else {
+                res.innerHTML = `<p>Você é Brasileiro.`
+            }
+        }
+    </script>
+</body>
+</html>
