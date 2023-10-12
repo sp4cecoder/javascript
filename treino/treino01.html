@@ -17,12 +17,14 @@
         function where() {
             var a1 = window.document.getElementById('país')
             var res = window.document.getElementById('resul')
-            res.innerHTML = `<p>Você é do/da ${a1}</p>`
-            if (a1 != Brasil) {
-                res.innerHTML = `<p>Você é estrangeiro`
+            var country = (a1.value)
+
+            if (country == 'Brasil') {
+                res.innerHTML = `<p>Você é Brasileiro.</p>`
             } else {
-                res.innerHTML = `<p>Você é Brasileiro.`
+                res.innerHTML = `<p>Você é Estrangeiro</p>`
             }
+            res.innerHTML += `<p>Isso porque você nasceu no/na: ${country}`
         }
     </script>
 </body>
