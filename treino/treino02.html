@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>Insira os números que quiser:</p>
+    <input type="number" name="calc1" id="calc1">
+    <input type="number" name="calc2" id="calc2">
+    <input type="button" value="Verify" onclick="calcular()">
+    <div id="result">
+
+    </div>
+    <script>
+        function calcular() {
+            var val1 = window.document.getElementById('calc1')
+            var val2 = window.document.querySelector('input#calc2')
+            var total = window.document.getElementById('result')
+
+            var box1 = Number(val1.value)
+            var box2 = Number(val2.value)
+            var s = box1 + box2
+
+            total.innerHTML = `<p>Os números ${box1} e ${box2} somados, resultam em: <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
