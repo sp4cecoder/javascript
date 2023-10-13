@@ -1,18 +1,24 @@
-var n = document.getElementById('inum')
+/*var n = document.getElementById('inum')
 // var box = Number(n1.value)
 var res = documente.getElementById('res')
-var n1 = Number(n.value)
-var s = n1 * 1
-var s1 = n1 * 2
-var s2 = n1 * 3
-var s3 = n1 * 4
-var s4 = n1 * 5
-var s5 = n1 * 6
-var s6 = n1 * 7
-var s7 = n1 * 8
-var s8 = n1 * 9
-var s9 = n1 * 10
+var n1 = Number(n.value) */
+
 function gerar() {
-    res.innerHTML = `${n1} x 1 = ${s}`
+    let num = document.getElementById('inum')
+    let tab = document.getElementById('seltab')
+    if (num.value.length == 0) {
+        window.alert('Por favvor, digite um número!')
+    } else {
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while (c <= 10) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+        }
+    }
 }
 
