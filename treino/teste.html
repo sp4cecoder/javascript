@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Insira os dados:</p>
+   <!-- Usuário: <input type="text" name="user" id="iuser"> -->
+    Senha: <input type="text" name="pass" id="ipass">
+    <input type="button" value="Entrar" onclick="entrar()">
+    <div id="res">
+        ...
+        
+    </div>
+    <div id="ptxt">
+        ...
+    </div>
+
+    <script>
+        var senha = window.document.getElementById('ipass')
+        var senha1 = Number(senha.value)
+        var res = document.getElementById('res')
+        var pti = document.getElementById('ptxt')
+        var s = senha1
+        function entrar() {
+            var num = 1
+            while (num <= 10) {
+                res.innerHTML = 'Analisando dados...'
+            }
+        }
+    </script>
+</body>
+</html>
