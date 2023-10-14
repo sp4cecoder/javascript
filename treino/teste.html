@@ -8,32 +8,55 @@
 <body>
     <h1>Título</h1>
     <p>Insira os dados:</p>
-   <!-- Usuário: <input type="text" name="user" id="iuser"> -->
-    Senha: <input type="text" name="pass" id="ipass">
+    <p>Usuário: <input type="text" name="user" id="iuser"></p>
+    <p>Senha: <input type="text" name="pass" id="ipass"></p> <br>
     <input type="button" value="Entrar" onclick="entrar()">
-    <div id="res">
+    <input type="reset" value="Limpar" onclick="limpar()">
+    <div id="rest">
         ...
-        
     </div>
-    <div id="ptxt">
-        ...
+    <div>
+        <p id="ptest"></p>
     </div>
 
     <script>
-        var senha = window.document.getElementById('ipass')
+        /*var senha = window.document.getElementById('ipass')
         var senha1 = Number(senha.value)
         var res = document.getElementById('res')
         var pti = document.getElementById('ptxt')
-        var s = senha1
+        var s = senha1 */
         function entrar() {
-            var num = 1
-            while (num <= 12) {
-                res.innerHTML = 'Analisando dados...'
-                num++
-                if (num >= 12) {
-                    pti.innerHTML = 'Entrou'
-                }
+            let username = document.getElementById('iuser')
+            let senha = document.getElementById('ipass')
+            let res = document.getElementById('rest')
+            let test = document.getElementById('ptest')
+            let user = String(username.value)
+            let passw = Number(senha.value)
+            let nome = 'Juan'
+            res.innerHTML = 'Analisando Dados...<br>'
+            var c = 10
+            while (c <= 100) {
+                res.innerHTML += `${c}%<br>`
+                c+=10
             }
+            if (c > 100) {
+                res.innerHTML += 'Análise completa...'
+            }
+            if (c > 100 && passw == 1545 && user == nome) {
+                res.innerHTML += '<br>Entrando...'
+            } else {
+                test.innerHTML = '[ERROR] Cheque os seus dados...'
+            }
+        }
+
+        function limpar() {
+            let senha = document.getElementById('ipass')
+            let res = document.getElementById('rest')
+            let test = document.getElementById('ptest')
+            senha.innerHTML = ''
+            res.innerHTML = '...'
+            test.innerHTML = ''
+            alert('LIMPANDO...')
         }
     </script>
 </body>
